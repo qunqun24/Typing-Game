@@ -1,5 +1,6 @@
 # Typing-Game
 一个简单的打字小游戏（学校作业）
+下载后请将 两个wav文件（Minesweeper.wav和Terraria.wav）放到刚刚下载并解压完毕的 打字游戏\x64\Debug文件夹中，否则会无法播放背景音乐！！！
 
 A．如何开始游戏？
 1.	打开游戏
