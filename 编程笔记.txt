@@ -1,0 +1,94 @@
+ #include <stdio.h>
+int main()
+{
+
+return 0;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include <stdio.h>
+#include <stdlib.h> 
+#include <conio.h>
+#include <windows.h>
+#include <math.h>
+
+
+//void HideCursor(int x)//定义隐藏显示光标函数 0为隐藏 1为显示  头文件windows.h 
+{
+	CONSOLE_CURSOR_INFO cursor_info={1,x};
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE),&cursor_info);
+}
+
+
+//void GotoXY(int x,int y)//定义光标位置函数  x,y为坐标       头文件windows.h 
+{
+	COORD pos;
+	pos.X=x-1;
+	pos.Y=y-1;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),pos);
+}
+
+
+//system("mode con cols=70 lines=10") 意思是设置窗口大小，cols表示宽度，lines表示高度
+  system 头文件stdlib.h
+
+
+//kbhit函数头文件conio.h
+kbhit () 是一个C和C++函数，为 “keyboard hit（键盘敲击）”的简写。 kbhit 是 _kbhit () 的弃用别名，尽管它依然受到支持，微软仍建议使用遵循 C 命名规则的 _kbhit () [1] 。
+ 功能及返回值： 检查当前是否有键盘输入，若有则返回一个非0值，否则返回0。
+
+
+//sleep函数头文件Windows.h                      sleep（200）
+Sleep函数可以使计算机程序（进程，任务或线程）进入休眠，使其在一段时间内处于非活动状态。当函数设定的计时器到期，或者接收到信号、程序发生中断都会导致程序继续执行。
+
+
+//getch()：
+所在头文件：conio.h
+函数用途：从控制台读取一个字符，但不显示在屏幕上
+函数原型：int getch(void)
+返回值：读取的字符
+例如：
+char ch;或int ch;
+getch();或ch=getch();
+用getch();会等待你按下任意键，再继续执行下面的语句；
+用ch=getch();会等待你按下任意键之后，把该键字符所对应的ASCII码赋给ch,再执行下面的语句。
+
+
+//#include <math.h>
+math.h头文件中声明了常用的一些数学运算，比如乘方，开方运算，sin(),cos()等等。
+
+
+//#include <stdio.h>
+#include <windows.h>
+//设置默认的控制台前景和背景颜色。
+//
+//COLOR [attr]
+//
+//  attr        指定控制台输出的颜色属性
+//
+//颜色属性由两个十六进制数字指定 -- 第一个为背景，第二个则为
+//前景。每个数字可以为以下任何值之一:
+//
+//    0 = 黑色       8 = 灰色
+//    1 = 蓝色       9 = 淡蓝色
+//    2 = 绿色       A = 淡绿色
+//    3 = 浅绿色     B = 淡浅绿色
+//    4 = 红色       C = 淡红色
+//    5 = 紫色       D = 淡紫色
+//    6 = 黄色       E = 淡黄色
+//    7 = 白色       F = 亮白色
+//   若是两个颜色相同则会变为默认颜色。 
+void DT()
+{	 
+	system("color 1A");
+	printf("背景颜色，字体颜色\n\n"); 
+}
+int main()
+{
+	DT();
+	return 0;
+}
+
+
+
